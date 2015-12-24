@@ -4,41 +4,26 @@
     <meta charset="utf-8">
     <title>free transform</title>
   </head>
-  <body>
-    <div style="left:100px;top:100px;position:relative;width:350px;height:200px" id="wrapper">
+  <body style="width:100%;height:1000px">
 
-      <div style="left:8px;top:8px;position:absolute" class="internalWrapper" >
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="width:350px;height:200px"
-              id="myShape">
-              <ellipse cx="50%" cy="50%" rx="50%" ry="50%"
-                  stroke="#FF0000" stroke-width="2" fill="#800000" />
-          </svg>
-      </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+        style="left:20px;top:200px;width:300px;height:200px;position:absolute" class="mySvgs">
+        <ellipse cx="50%" cy="50%" rx="50%" ry="50%" stroke="#FF0000" stroke-width="2" fill="#800000" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+        style="left:340px;top:200px;width:100px;height:200px;position:absolute;overflow:hidden" class="mySvgs">
+        <line x1="0" y1="0" x2="100%" y2="100%" stroke="#008000" stroke-width="15" stroke-linecap="round" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+        style="left:460px;top:200px;width:100px;height:200px;position:absolute" class="mySvgs">
+        <rect x="0" y="0" width="100%" height="100%" stroke="#8000FF" fill="#8080FF"
+            rx="10" ry="10" stroke-width="5" />
+    </svg>
 
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-          style="left:0px;top:0px;position:relative;width:100%;height:100%" >
-          <line x1="0" y1="0" x2="100%" y2="0" stroke="#000" stroke-width="5" opacity="0"
-              class="topActionTrigger" />
-          <line x1="0" y1="100%" x2="100%" y2="100%" stroke="#000" stroke-width="5" opacity="0"
-              class="bottomActionTrigger" />
-          <line x1="0" y1="0" x2="0" y2="100%" stroke="#000" stroke-width="5" opacity="0"
-              class="leftActionTrigger" />
-          <line x1="100%" y1="0" x2="100%" y2="100%" stroke="#000" stroke-width="5" opacity="0"
-              class="rightActionTrigger" />
-          <circle cx="0" cy="0" r="8" stroke="#000" stroke-width="0" fill="#000" opacity="0"
-              class="topLeftActionTrigger" />
-          <circle cx="100%" cy="0" r="8" stroke="#000" stroke-width="0" fill="#000" opacity="0"
-              class="topRightActionTrigger" />
-          <circle cx="0" cy="100%" r="8" stroke="#000" stroke-width="0" fill="#000" opacity="0"
-              class="bottomLeftActionTrigger" />
-          <circle cx="100%" cy="100%" r="8" stroke="#000" stroke-width="0" fill="#000" opacity="0"
-              class="bottomRightActionTrigger" />
-              <rect x="0" y="0" width="100%" height="100%" fill-opacity="0.5" opacity="0"
-                  class="moveActionTrigger" />
-      </svg>
-
-  </div>
   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <script src="transform.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var svgResizeTool = WrapWithMoveAndResizeTool("svg");
+  </script>
   </body>
 </html>
